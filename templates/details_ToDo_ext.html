@@ -1,0 +1,26 @@
+{% extends 'header_footer.html' %}
+{% block content %}
+    <section>
+        <div class="information">
+            <form method="Post" action="{{url_for('activateFolderExt')}}"></form>
+                {% if not dataframmeModExt.empty:%}
+                    <div class = "message">
+                        Liste des tâche à faire pour synchroniser le dossier destination :
+                    </div>
+                    <br>
+                    <div class="tab">
+                        {{dataExt | safe}}
+                    </div>
+                    <br>
+                {% else: %}
+                    <div class="messageWarning">
+                        <b>Aucune tâche à effectuer!! Synchronisation non utile.</b>
+                    </div>
+                    <br>
+                {% endif %}
+            <div>
+                <a class="links" href="{{url_for('activateDetailsExt')}}">Retour à la synchronisation </a> <br>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'header_footer.html' %}
+{% block content %}
+
+    <section>
+        <fieldset class="fieldsetActivate">
+            <legend>Synchroniser tous les fichiers</legend>
+            <form method="Post" action="{{url_for('activateFolder')}}">
+                <br>
+                <div class="form">
+                    <label for="dossierSrc">Dossier Source: </label>
+                    <input type="text" name="dossierSrc" id="dossierSrc" style='width:25rem' required="required" placeholder="ex : C:/Users/Dell 2K/Documents/Dossier_source">
+                </div>
+                <br>
+                <div class="form">
+                    <label for="dossierDest">Dossier Destination: </label>
+                    <input type="text" name="dossierDest" id="dossierDest" style='width:25rem' required="required" placeholder="ex : C:/Users/Dell 2K/Documents/Dossier_destination">
+                </div>
+                <br>
+                    <p>
+                        <input class="buttonActivate" type="submit" value='Valider' style="width:300px">
+                   </p>
+            </form>                      
+        </fieldset>
+    </section>
+
+{% endblock %}

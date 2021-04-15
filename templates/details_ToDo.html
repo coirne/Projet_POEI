@@ -1,0 +1,26 @@
+{% extends 'header_footer.html' %}
+{% block content %}
+    <section>
+        <div class="information">
+            <form method="Post" action="{{url_for('activateFolder')}}"></form>
+                {% if not dataframmeMod.empty:%}
+                    <div class = "message">
+                        Liste des tâche à faire pour synchroniser le dossier destination : 
+                    </div>
+                    <br>
+                    <div class="tab">
+                        {{data | safe}} 
+                    </div>
+                    <br>
+                {% else: %}
+                    <div class="messageWarning">
+                        <B> Aucune tâche à effectuer!! Synchronisation non utile. </B> 
+                    </div>
+                    <br>
+                {% endif %}
+            <div>
+                <a class="links" href="{{url_for('activateDetails')}}">Retour à la synchronisation </a> <br>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'header_footer.html' %}
+{% block content %}
+
+    <section>
+        <div class="text">
+            Bienvenue dans le synchroniseur de fichier, pour synchroniser vos dossiers en local vous avec 2 choix :
+        </div>
+        <div class="contentContainer">
+            <div class="contentLeft">
+                <fieldset class= fileldsetHome> 
+                    <br>
+                    <legend class="legend">Synchroniser tous les fichiers</legend>
+                    Synchroniser tous les fichiers de votre dossier source vers votre dossier destination <br> 
+                    <br>
+                    <br>
+                    <div class="buttonHomeLeft">
+                        <p>
+                         <a href="{{ url_for ('enterFolder') }}" >Commencer</a>
+                       </p>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="contentRignt">
+                <fieldset class= fileldsetHome>
+                    <br>
+                    <legend class="legend">Synchroniser les fichiers par extention</legend>
+                    Synchroniser seulement les fichiers avec l'extention choisie de votre dossier source vers votre dossier destination <br> 
+                    <br>
+                    <div class="buttonHomeRight">
+                        <p>
+                         <a href="{{ url_for ('enterFolderExt') }}" >Commencer</a>
+                       </p>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+    
+

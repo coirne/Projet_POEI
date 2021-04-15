@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchroniseur</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='projet.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+
+<body>
+    <header>
+        <div class=pageTitle>
+            <b>Synchroniseur de dossiers</b>
+        </div>
+
+        <nav class="navContainer">
+            <a class="nav1" href="{{ url_for ('home') }}">Acceuil</a>
+            <a class="nav2" href="{{ url_for ('enterFolder') }}">Synchroniser tous les fichiers</a>
+            <a class="nav3" href="{{ url_for ('enterFolderExt') }}">Synchroniser par extension</a>
+        </nav>
+    </header>
+    {% block content %}{% endblock %}
+</body>
+
+</html>

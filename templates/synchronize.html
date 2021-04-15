@@ -1,0 +1,33 @@
+{% extends 'header_footer.html' %}
+{% block content %}
+    <section>
+        <form method="Post" action="{{url_for('synchronizeFolder')}}"></form>
+        <div class = "information">
+            <div class="message"> <b>Les dossiers sont synchronisés</b> <br> <br>
+                <p> {% if historyUpdateDest %}
+                    <div class="history">                      
+                        Historique d'actualisation du dossier destination : <br> <br>
+                        {% for hist in historyUpdateDest :%}
+                            {% print (hist) %} <br>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </p>
+            </div>
+            <br>
+            <div class = "message"> 
+                Liste des fichiers dans le Dossier Source :
+            </div>
+            <div class="tab"> 
+                {{dataSrc | safe}} 
+            </div> 
+            <br>
+            <div class = "message">
+                Liste des fichiers dans le Dossier Destination :
+            </div>
+            <div class="tab"> 
+                {{dataDest | safe}}
+            </div>
+        </div>  
+    </section>
+{% endblock %}

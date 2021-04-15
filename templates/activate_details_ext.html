@@ -1,0 +1,43 @@
+{% extends 'header_footer.html' %}
+{% block content %}
+    <section>
+        <form method="Post" action="{{url_for('activateFolderExt')}}"></form>
+        <div class="information">
+            {% if msg_error %}
+                <div class = "messageError"> 
+                    <b> ERREUR : {{msg_error}} </b>
+                </div>
+                <br>
+                <br>
+                <a class="links" href="{{url_for('enterFolderExt')}}">Retour à la saisie des dossiers</a> <br>
+            {% elif msg_warning %}
+                <div class = "messageWarning"> 
+                    <b> WARNING : {{msg_warning}} </b> 
+                </div>
+                <br>
+                <br>
+                <a class="links" href="{{url_for('enterFolderExt')}}">Retour à la saisie des dossiers</a> <br>    
+            {% else %}
+                <div class = "messageFolder"> 
+                    Dossier Source : {{dossierSrcExt}} 
+                    <br>
+                    Dossier Destination : {{dossierDestExt}}
+                    <br>
+                    Extension : {{extension}}
+                </div>
+                <br>
+                <div>
+                    <a class="links" href="{{url_for('detailsSrcExt')}}">Détails de l'actualisation du Dossier Source</a> <br>
+                    <a class="links" href="{{url_for('detailsToDoExt')}}">Tâches à faire pour synchroniser le Dossier Destination avec le Dossier Source</a>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <form action="{{url_for('synchronizeFolderExt')}}">
+                        <button class="synchronizer" type="submit" style="width:300px">Synchroniser</button>
+                    </form>        
+                </div>
+            {% endif %}       
+        </div>
+    </section>
+{% endblock %}

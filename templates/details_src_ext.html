@@ -1,0 +1,28 @@
+{% extends 'header_footer.html' %}
+{% block content %}
+    <section>
+        <div class="information">
+            <form method="Post" action="{{url_for('activateFolderExt')}}"></form>
+            <div class = "message">
+                Liste des fichiers dans le Dossier Source :
+            </div>
+            <br>
+            <div class="tab"> 
+                {{dataExt | safe}}
+            </div>
+            <br>
+            <div class = "message">
+                {% if dataFrammeSrcExt %}
+                    Historique d'actualisation du Dossier Source :
+                    {% for hist in historyActivateExt :%}
+                        {% print (hist) %} <br>
+                    {% endfor %}
+                {% endif %}
+            </div> 
+            <br>
+            <div>
+                <a class="links"  href="{{url_for('activateDetailsExt')}}">Retour à la synchronisation </a> <br>
+            </div>
+        </div>
+    </section>
+{% endblock %}

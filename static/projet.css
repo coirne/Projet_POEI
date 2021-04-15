@@ -1,0 +1,206 @@
+/* header_footer */
+header{
+    height: 20vh;
+    margin: 2rem;
+    font-family: "Sofia";
+}
+
+.pageTitle{
+    height: 8vh;
+    margin: 2rem;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(18, 161, 149);
+}
+
+.navContainer{
+    height: 8vh;
+    margin: 2rem;
+    display: grid;
+    text-align: center;
+    font-size: 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.nav1{
+    background: rgb(136, 236, 206);
+    color: rgb(20, 36, 32) ;  
+}
+
+.nav2{
+    background: rgb(136, 216, 236);
+    color: rgb(20, 36, 32) ; 
+}
+
+.nav3{
+    background: rgb(211, 179, 236);
+    color: rgb(20, 36, 32) ; 
+}
+
+
+/* home */
+.text{
+    margin: 3rem;
+    color:rgba(0, 0, 0);  
+    font-size: 20px;
+    font-family: Verdana, sans-serif;
+}
+
+.fileldsetHome{
+    height:35vh;
+    background-color:rgba(169, 243, 231, 0.3);	
+    margin: 1rem;
+    border: solid;
+    border-radius:8px; 
+    font-size: 18px;
+    font-family: Verdana, sans-serif;
+  }
+
+.contentContainer{
+    height: 8vh;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.buttonHomeLeft {
+    display:block;
+    width:150px;
+    line-height:25px;
+    text-align:center;
+    border: 2px rgb(36, 158, 148) inset;
+    border-radius: 10px;
+    color:rgb(44, 32, 155);
+    background: rgb(136, 216, 236);
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+.buttonHomeLeft a:hover {
+    font-size: 25px;
+    color:rgb(219, 49, 49);
+        }
+
+.buttonHomeRight{
+    display:block;
+    width:150px;
+    line-height:25px;
+    text-align:center;
+    border: 2px rgb(36, 158, 148) inset;
+    border-radius: 10px;
+    color:rgb(44, 32, 155);
+    background: rgb(211, 179, 236);
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+.buttonHomeRight a:hover {
+    font-size: 25px;
+    color:rgb(219, 49, 49);
+        }
+
+
+
+/* activate ; activateExt*/
+.fieldsetActivate{
+    height:30vh;
+    background-color:rgba(169, 243, 231, 0.3);	
+    margin: 2rem;
+    border-radius:8px; 
+    font-size: 18px;
+    font-family: Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fieldsetActivateExt{
+    height:38vh;
+    background-color:rgba(169, 243, 231, 0.3);	
+    margin: 2rem;
+    border-radius:8px; 
+    font-size: 18px;
+    font-family: Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttonActivate{
+    height:5vh;
+    font-size: 20px;
+    font-family: Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    line-height:10px;
+}
+
+.buttonActivate:hover {
+    font-size: 25px;
+    color:rgb(219, 49, 49);
+        }
+
+/* activate_details ; activate_details_ext */
+.messageError{
+    color:rgb(206, 17, 17);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+.messageWarning{
+    color:rgb(206, 140, 17);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+.messageFolder{
+    color:rgb(28, 26, 165);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+.links{
+    color:rgb(59, 117, 11);
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.synchronizer{
+    height:5vh;
+    font-size: 20px;
+    font-family: Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    line-height:10px;
+}
+
+.synchronizer:hover {
+    font-size: 25px;
+    color:rgb(219, 49, 49);
+        }
+
+/* details_src */
+.message{
+    font-size: 18px;
+    font-family: Verdana, sans-serif;
+}
+
+.tab{
+    font-size: 12px;
+    font-family: Verdana, sans-serif;
+}
+
+
+/* synchronize ; synchronizeExt*/
+.information{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 2rem;
+}
+
+section{
+    margin: 2rem;
+}
+
+.history{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}

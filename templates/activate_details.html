@@ -1,0 +1,35 @@
+{% extends 'header_footer.html' %}
+{% block content %}
+    <section>
+        <form method="Post" action="{{url_for('activateFolder')}}"></form>
+        <div class="information">
+            {% if msg_error %}
+                <div class = "messageError"> 
+                    <b> ERREUR : {{msg_error}} </b>  
+                </div> 
+                <br>
+                <div >
+                    <a class="links" href="{{url_for('enterFolder')}}">Retour à la saisie des dossiers</a> <br> 
+                </div>         
+            {% else %}
+                <div class = "messageFolder">  
+                    Dossier Source : {{dossierSrc}}
+                    <br>
+                    Dossier Destination : {{dossierDest}}
+                </div>
+                <br>
+                <div >
+                    <a class="links" href="{{url_for('detailsSrc')}}">Détails de l'actualisation du Dossier Source</a> <br>
+                    <a class="links" href="{{url_for('detailsToDo')}}">Tâches à faire pour synchroniser le Dossier Destination avec le Dossier Source</a>
+                </div>
+                <br>
+                <br>
+                <div >
+                    <form action="{{url_for('synchronizeFolder')}}">
+                        <button class="synchronizer" type="submit" style="width:300px">Synchroniser</button>
+                    </form>        
+                </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}
